@@ -14,7 +14,7 @@ Sagebeast 同时依赖三套已经存在的系统：
 
 ## 决定
 
-Sagebeast 只拥有领域层：研究任务、评分契约、实验记录，以及将来装入 DeepSeek Harness 的 preset 或 plugin。
+Sagebeast 拥有 App 页面、策略目录和策略运行器，以及将来装入 DeepSeek Harness 的 preset、skill 和 plugin。它不拥有 Agent 循环，也不拥有行情落盘。
 
 - 运行时消费 DeepSeek Harness，不 fork。
 - 自优化参考 Harness² 的方法，不采用它的执行器和外部基准。

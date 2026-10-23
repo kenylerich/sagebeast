@@ -1,19 +1,20 @@
 # Sagebeast
 
-股票研究 Agent。运行时消费 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)，跑分自优化参考 [Harness²](https://arxiv.org/abs/2610.14224)，行情与研究数据只经 [tick-stock-panel](https://github.com/shy3130/tick-stock-panel) 接入。
+基本面研究 App。页面用法接近 tick-stock-panel：任意页面都能打开 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 对话，用代码编写并反复运行策略。数据只经 [tick-stock-panel](https://github.com/shy3130/tick-stock-panel) 接入。Harness² 以后只用来优化本仓库的 harness，不作为执行器。
 
-**当前阶段只有文档和需求管理。产品代码还没开始，也不该开始。** 需求目录被明确接受之前，[编码门禁](docs/decisions/0002-requirements-before-code.md) 会拒绝产品目录。
+**当前阶段只有文档和需求管理。产品代码还没开始。** 需求目录被明确接受之前，[编码门禁](docs/decisions/0002-requirements-before-code.md) 会拒绝产品目录。2026-10-23 的目录是审阅草案，不是接受记录。
 
-English summary: Sagebeast is a stock-research agent. It uses DeepSeek Harness as the runtime, adapts the Harness² self-optimization method for its own benchmarks, and reads market data only through tick-stock-panel. This repository is in a documentation and requirements-management phase.
+English summary: Sagebeast is a fundamental-analysis app. Any page can open a DeepSeek Harness conversation to write and run strategy code. Market data comes only from tick-stock-panel. Harness² is a later optimization method, not the runtime.
 
 ## 现在读什么
 
 | 文档 | 作用 |
 |---|---|
+| [需求目录](docs/requirements/catalog.md) | 当前审阅草案 |
+| [代码依据](docs/requirements/code-basis.md) | 目录里每条边界对应的本地代码 |
+| [开放问题](docs/requirements/open-questions.md) | 还没选的实现选择 |
 | [愿景](docs/vision.md) | 这个仓库做什么、不做什么 |
-| [架构](docs/architecture.md) | 运行时、自优化、数据三个平面 |
-| [开放问题](docs/requirements/open-questions.md) | 编码前需要确认的选择 |
-| [需求目录](docs/requirements/catalog.md) | 草案需求，尚未接受 |
+| [架构](docs/architecture.md) | 页面、运行器、Harness、数据 |
 | [贡献流程](CONTRIBUTING.md) | Issue、标签、PR |
 | [安全边界](SAFETY.md) | 非投顾、密钥、默认权限 |
 

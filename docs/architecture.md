@@ -1,51 +1,39 @@
 # 架构
 
-Sagebeast 是三个上游之上的薄产品层。决策记录见 [0001](decisions/0001-three-plane-architecture.md)。
+决策约束仍是 [0001](decisions/0001-three-plane-architecture.md)。产品形态以 [需求目录](requirements/catalog.md) 为准。代码证据在 [代码依据](requirements/code-basis.md)。
 
 ```text
-┌──────────────────────────────────────────────────────────┐
-│ Sagebeast                                                 │
-│  领域技能、研究任务、评分契约、实验记录、dsh preset/plugin │
-└────────────┬────────────────────┬────────────────────────┘
-             │                    │
-             ▼                    ▼
-┌────────────────────┐   ┌────────────────────────┐
-│ 运行时平面          │   │ 自优化平面              │
-│ DeepSeek Harness   │   │ Harness² 方法           │
-│ 会话、工具、审批、MCP │   │ 提议、探测、组合、经验库 │
-└─────────┬──────────┘   └───────────┬────────────┘
-          │                          │
-          └──────────┬───────────────┘
-                     ▼
-          ┌──────────────────────┐
-          │ 数据平面              │
-          │ tick-stock-panel     │
-          │ Open API / MCP       │
-          └──────────────────────┘
+┌─────────────────────────────────────────────────────┐
+│ Sagebeast App                                        │
+│  基本面页面、策略目录、运行器、结果                     │
+│  任意页面打开 ↓                                      │
+└──────────────────────┬──────────────────────────────┘
+                       │
+                       ▼
+┌─────────────────────────────────────────────────────┐
+│ DeepSeek Harness                                     │
+│  对话、编码、AGENTS.md、skills、MCP、定时叫醒、审批    │
+└────────────┬─────────────────────┬──────────────────┘
+             │                     │
+             ▼                     ▼
+┌────────────────────┐   ┌──────────────────────────┐
+│ tick-stock-panel   │   │ Harness² 方法             │
+│ Open API / MCP     │   │ 只优化本仓库 harness 表面 │
+│ 股票财务已有契约    │   │ 不提供执行器              │
+└────────────────────┘   └──────────────────────────┘
 ```
 
-## 运行时平面
+## 四段职责
 
-DeepSeek Harness 提供 Agent 循环、工具注册、会话日志、审批、技能和 MCP 客户端。Sagebeast 以后以 profile、preset 或插件包的形式装入，而不是复制一个新的 Agent 循环。
+| 段 | 负责 | 不负责 |
+|---|---|---|
+| App 页面 | 标的、策略摘要、结果、清晰显示 | Agent 循环、行情落盘 |
+| 策略运行器 | 并发取数、长任务、取消、结果 | 到点本身、模型自优化 |
+| DeepSeek Harness | 写策略、加载 skill、MCP、定时叫醒 | 扫描一百只标的的计算 |
+| tick-stock-panel | 行情和已有财务口径 | Sagebeast 的页面和策略格式 |
 
-消费契约见 [deepseek-harness.md](integrations/deepseek-harness.md)。插件包放在本仓库还是独立包，仍是 [开放问题 Q1](requirements/open-questions.md)。文档阶段不创建包。
+Harness² 不在日常运行路径上。它只在 REQ-005 和 REQ-006 被接受后，读取实验记录并提议 harness 修改。
 
-## 自优化平面
+## 现在没有的接缝
 
-Harness² 说明：模型权重不变时，仍可以通过对比执行证据改进 harness。本项目只借用这个方法，用来提高 Sagebeast 自己的研究任务分数。
-
-可编辑对象要对齐 DeepSeek Harness 已有表面：系统提示、护栏、记忆、工具说明、子代理、技能、脚本和插件配置。不引入第二套执行器。
-
-方法契约见 [harness2.md](integrations/harness2.md)。循环放在 `dsh` workflow 内还是仓外驱动器，仍是 [开放问题 Q2](requirements/open-questions.md)。
-
-## 数据平面
-
-所有股票数据从 tick-stock-panel 进入。它的开放网关负责认证、scope、限流和字段契约。MCP 服务器是这层网关的薄桥，不是另一套数据实现。
-
-契约见 [tick-stock-panel.md](integrations/tick-stock-panel.md)。库代码走 Open API 还是会话只挂 MCP，仍是 [开放问题 Q3](requirements/open-questions.md)。两条路都必须终结在同一网关。
-
-## 仓库里现在有什么
-
-只有文档和 GitHub 流程。编码门禁允许的顶层路径写在 [`.github/issue-management/coding-gate.mjs`](../.github/issue-management/coding-gate.mjs)。
-
-以后的产品代码必须能指出它属于哪个平面。一个改动同时碰运行时权限和数据口径时，PR 要带多个 `area/*`，并在正文写明边界。
+DeepSeek Harness 没有外嵌抽屉。tick-stock-panel 没有可转债和期货契约，财务因子也不覆盖 ETF。这些缺口写在开放问题里，不在架构图里补一条虚线假装已经接通。
