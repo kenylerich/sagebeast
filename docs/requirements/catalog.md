@@ -16,7 +16,7 @@
 | 同行和行业比较 | [第 6 节](app-functions.md#6-同行和行业比较) |
 | 变化提醒 | [第 7 节](app-functions.md#7-变化提醒) |
 | 定时和运行记录 | [第 8 节](app-functions.md#8-定时和运行记录) |
-| 市场接入和数据管理 | [第 9 节](app-functions.md#9-市场接入和数据管理) |
+| 市场接入、全量数据和多源规则 | [第 9 节](app-functions.md#9-市场接入和数据管理) |
 | 设置 | [第 10 节](app-functions.md#10-设置) |
 | 第一版不搬的面板功能 | [第 11 节](app-functions.md#11-面板有第一版不搬的功能) |
 | 以后的 harness 优化 | [第 12 节](app-functions.md#12-以后才做的优化) |
