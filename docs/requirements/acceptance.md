@@ -2,7 +2,7 @@
 
 聊天里的同意不会打开编码门禁。接受必须落在仓库里，才能被以后的 PR 和代理读到。
 
-2026-10-23 的 [需求目录](catalog.md) 是审阅稿。看完后指出要改的句子，再决定接受哪些编号。不要把这一版当成已经同意。
+审阅稿是 [App 功能需求](app-functions.md)。目录只是索引。看完后指出要改的句子。不要把这一版当成已经同意。
 
 ## 接受记录
 
@@ -38,7 +38,7 @@
 
 - 标题：`接受需求目录`
 - 标签：`track/requirement`、`status/inbox`、`area/process`、`area/docs`、`p0`、`source/maintainer`
-- 正文链接本文件、[目录](catalog.md) 和 [开放问题](open-questions.md)。
+- 正文链接本文件、[App 功能需求](app-functions.md) 和 [开放问题](open-questions.md)。
 - 完成条件是 `0003` 落地，或维护者明确要求继续只改文档。
 
 在那条 Issue 被解决前，产品代码 PR 没有可引用的已接受需求。
