@@ -1,0 +1,20 @@
+{
+  "owner": "kenylerich",
+  "repository": "kenylerich/sagebeast",
+  "projectEnabled": false,
+  "projectNumber": null,
+  "projectTitle": "Sagebeast Requirements",
+  "lifecycleActor": "github-actions[bot]",
+  "priorityField": "Priority",
+  "startDateField": "Start Date",
+  "projectTimeZone": "Asia/Shanghai",
+  "statuses": [
+    "Inbox",
+    "Backlog",
+    "Ready",
+    "In progress",
+    "In review",
+    "Done",
+    "No action"
+  ]
+}

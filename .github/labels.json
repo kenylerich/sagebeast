@@ -1,0 +1,167 @@
+{
+  "labels": [
+    {
+      "name": "kind/feature",
+      "color": "1d76db",
+      "description": "PR：新增行为或有意改变行为"
+    },
+    {
+      "name": "kind/bug-fix",
+      "color": "1d76db",
+      "description": "PR：修正错误行为"
+    },
+    {
+      "name": "kind/doc",
+      "color": "1d76db",
+      "description": "PR：以文档变更为主导意图"
+    },
+    {
+      "name": "kind/testing",
+      "color": "1d76db",
+      "description": "PR：只改测试或测试基础设施"
+    },
+    {
+      "name": "kind/cleanup",
+      "color": "1d76db",
+      "description": "PR：保持行为不变的维护或简化"
+    },
+    {
+      "name": "kind/dependency",
+      "color": "1d76db",
+      "description": "PR：没有其他主导意图时更新依赖"
+    },
+    {
+      "name": "area/docs",
+      "color": "5319e7",
+      "description": "项目文档、决策记录与需求目录"
+    },
+    {
+      "name": "area/process",
+      "color": "5319e7",
+      "description": "Issue、PR、标签和仓库门禁"
+    },
+    {
+      "name": "area/runtime",
+      "color": "5319e7",
+      "description": "DeepSeek Harness 运行时消费方式"
+    },
+    {
+      "name": "area/optimize",
+      "color": "5319e7",
+      "description": "参考 Harness² 的跑分自优化"
+    },
+    {
+      "name": "area/data",
+      "color": "5319e7",
+      "description": "只经 tick-stock-panel 的数据接入"
+    },
+    {
+      "name": "area/agent",
+      "color": "5319e7",
+      "description": "股票研究 Agent 的可观察行为"
+    },
+    {
+      "name": "area/eval",
+      "color": "5319e7",
+      "description": "跑分任务、评分与实验记录"
+    },
+    {
+      "name": "area/safety",
+      "color": "5319e7",
+      "description": "非投顾边界、密钥与权限"
+    },
+    {
+      "name": "area/infra",
+      "color": "5319e7",
+      "description": "CI、依赖和开发者工具"
+    },
+    {
+      "name": "p0",
+      "color": "b60205",
+      "description": "阻塞基线或会造成错误研究结论"
+    },
+    {
+      "name": "p1",
+      "color": "d93f0b",
+      "description": "当前阶段必须完成"
+    },
+    {
+      "name": "p2",
+      "color": "fbca04",
+      "description": "应做，但不阻塞当前阶段"
+    },
+    {
+      "name": "p3",
+      "color": "c5def5",
+      "description": "可延后"
+    },
+    {
+      "name": "status/inbox",
+      "color": "cfd3d7",
+      "description": "新进入，尚未分拣"
+    },
+    {
+      "name": "status/backlog",
+      "color": "fef2c0",
+      "description": "已接受方向，尚未准备开工"
+    },
+    {
+      "name": "status/ready",
+      "color": "0e8a16",
+      "description": "验收标准清楚，可以开工"
+    },
+    {
+      "name": "status/in-progress",
+      "color": "1d76db",
+      "description": "已有解决型 PR 或正在实现"
+    },
+    {
+      "name": "status/in-review",
+      "color": "fbca04",
+      "description": "已请求评审"
+    },
+    {
+      "name": "status/done",
+      "color": "0e8a16",
+      "description": "已完成并关闭"
+    },
+    {
+      "name": "status/no-action",
+      "color": "e4e669",
+      "description": "不计划处理"
+    },
+    {
+      "name": "track/requirement",
+      "color": "0052cc",
+      "description": "需求目录中的一条可验收需求"
+    },
+    {
+      "name": "track/research",
+      "color": "6f42c1",
+      "description": "先取证、再决定是否变成 Feature 或 Task"
+    },
+    {
+      "name": "source/maintainer",
+      "color": "eeeeee",
+      "description": "维护者建立的 Issue"
+    },
+    {
+      "name": "source/agent",
+      "color": "eeeeee",
+      "description": "编码代理建立的 Issue"
+    }
+  ],
+  "retired": [
+    "bug",
+    "enhancement",
+    "documentation",
+    "kind/bug",
+    "kind/documentation",
+    "feature",
+    "bug-fix",
+    "doc",
+    "cleanup",
+    "testing",
+    "dependencies"
+  ]
+}

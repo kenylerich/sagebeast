@@ -1,0 +1,23 @@
+name: Repository checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    name: Repository checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Run policy tests
+        run: node --test .github/issue-management/policy.test.mjs
+      - name: Enforce coding gate
+        run: node .github/issue-management/coding-gate.mjs

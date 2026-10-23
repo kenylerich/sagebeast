@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 需求目录与开放问题
+    url: https://github.com/kenylerich/sagebeast/blob/main/docs/requirements/README.md
+    about: 编码前先读需求目录。未接受的需求不要开工。
