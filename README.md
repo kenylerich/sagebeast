@@ -10,8 +10,9 @@ English summary: Sagebeast is a fundamental-analysis app. Any page can open a De
 
 | 文档 | 作用 |
 |---|---|
-| [需求目录](docs/requirements/catalog.md) | 当前审阅草案 |
-| [代码依据](docs/requirements/code-basis.md) | 目录里每条边界对应的本地代码 |
+| [App 功能需求](docs/requirements/app-functions.md) | 按面板功能改写的审阅稿，先看这份 |
+| [需求目录](docs/requirements/catalog.md) | 运行时和数据约束，不是功能清单 |
+| [代码依据](docs/requirements/code-basis.md) | 本地代码证据 |
 | [开放问题](docs/requirements/open-questions.md) | 还没选的实现选择 |
 | [愿景](docs/vision.md) | 这个仓库做什么、不做什么 |
 | [架构](docs/architecture.md) | 页面、运行器、Harness、数据 |

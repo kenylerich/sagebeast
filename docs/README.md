@@ -11,7 +11,8 @@
 | [decisions/0001-three-plane-architecture.md](decisions/0001-three-plane-architecture.md) | 为什么分成三个平面 |
 | [decisions/0002-requirements-before-code.md](decisions/0002-requirements-before-code.md) | 为什么现在不编码 |
 | [requirements/README.md](requirements/README.md) | 需求怎么进入、接受和关闭 |
-| [requirements/catalog.md](requirements/catalog.md) | 2026-10-23 审阅草案 |
+| [requirements/app-functions.md](requirements/app-functions.md) | 按面板页面整理的功能需求 |
+| [requirements/catalog.md](requirements/catalog.md) | 运行时约束，不是功能清单 |
 | [requirements/code-basis.md](requirements/code-basis.md) | 本地代码证据 |
 | [requirements/open-questions.md](requirements/open-questions.md) | 尚未决定、会挡住实现的问题 |
 | [requirements/acceptance.md](requirements/acceptance.md) | 怎样算同意开始编码 |

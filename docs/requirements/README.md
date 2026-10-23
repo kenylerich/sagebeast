@@ -31,10 +31,11 @@ DeepSeek Harness 用 GitHub Project 保存状态和优先级，并用 App token 
 
 ## 阅读顺序
 
-1. [需求目录](catalog.md)
-2. [代码依据](code-basis.md)
-3. [开放问题](open-questions.md)
-4. [准备标准](definition-of-ready.md)
-5. [接受方式](acceptance.md)
+1. [App 功能需求](app-functions.md)
+2. [需求目录](catalog.md)
+3. [代码依据](code-basis.md)
+4. [开放问题](open-questions.md)
+5. [准备标准](definition-of-ready.md)
+6. [接受方式](acceptance.md)
 
 2026-10-23 重写了目录。REQ-007 已放弃。其余旧编号保留，但正文以目录当前版本为准。
