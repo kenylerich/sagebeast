@@ -31,8 +31,8 @@ DeepSeek Harness 用 GitHub Project 保存状态和优先级，并用 App token 
 
 ## 阅读顺序
 
-1. [App 功能需求](app-functions.md)
-2. [需求目录](catalog.md)
+1. [App 功能需求](app-functions.md)。功能只写在这里。
+2. [需求目录](catalog.md)。只做索引，不重复功能。
 3. [代码依据](code-basis.md)
 4. [开放问题](open-questions.md)
 5. [准备标准](definition-of-ready.md)
